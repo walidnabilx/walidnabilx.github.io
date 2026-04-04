@@ -1,0 +1,161 @@
+/* ── Boot Screen ── */
+#boot-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: #2c001e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease;
+}
+
+#boot-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ubuntu-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 48px;
+  animation: logoFadeIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes logoFadeIn {
+  to { opacity: 1; }
+}
+
+.boot-dots {
+  display: flex;
+  gap: 12px;
+}
+
+.boot-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  animation: bootPulse 1.2s ease-in-out infinite;
+}
+
+.boot-dots .dot:nth-child(1) { animation-delay: 0s; }
+.boot-dots .dot:nth-child(2) { animation-delay: 0.2s; }
+.boot-dots .dot:nth-child(3) { animation-delay: 0.4s; }
+.boot-dots .dot:nth-child(4) { animation-delay: 0.6s; }
+.boot-dots .dot:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes bootPulse {
+  0%, 100% { background: rgba(255, 255, 255, 0.2); transform: scale(1); }
+  50% { background: #e95420; transform: scale(1.2); }
+}
+
+/* ── Login Screen ── */
+#login-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: linear-gradient(135deg, #2c001e 0%, #300a24 40%, #3c1053 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+#login-screen.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#login-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.login-time {
+  position: absolute;
+  top: 15%;
+  font-size: 64px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.login-date {
+  position: absolute;
+  top: calc(15% + 80px);
+  font-size: 16px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.login-avatar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.login-avatar-wrapper:hover {
+  transform: scale(1.05);
+}
+
+.login-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e95420, #c34113);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.login-name {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.login-hint {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 4px;
+}
+
+.login-unlock-bar {
+  margin-top: 24px;
+  width: 260px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  gap: 8px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.login-unlock-bar:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.login-unlock-bar svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}

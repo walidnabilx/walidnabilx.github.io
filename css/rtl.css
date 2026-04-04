@@ -1,0 +1,97 @@
+/* ── RTL Overrides ── */
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="rtl"] .dock {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+html[dir="rtl"] .dock-item .dock-indicator {
+  left: auto;
+  right: -4px;
+}
+
+html[dir="rtl"] .dock-item .dock-tooltip {
+  left: auto;
+  right: calc(100% + 8px);
+}
+
+html[dir="rtl"] .window-area {
+  left: 0;
+  right: 68px;
+}
+
+html[dir="rtl"] .window-controls {
+  order: 2;
+}
+
+html[dir="rtl"] .window-title {
+  order: 1;
+}
+
+html[dir="rtl"] .settings-sidebar {
+  border-right: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+html[dir="rtl"] .timeline-item {
+  padding-left: 0;
+  padding-right: 28px;
+}
+
+html[dir="rtl"] .timeline-item::before {
+  left: auto;
+  right: 6px;
+}
+
+html[dir="rtl"] .timeline-item::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .timeline-details li {
+  padding-left: 0;
+  padding-right: 12px;
+}
+
+html[dir="rtl"] .timeline-details li::before {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .email-field label {
+  text-align: right;
+}
+
+html[dir="rtl"] .terminal-prompt-line {
+  direction: ltr;
+}
+
+html[dir="rtl"] .terminal-output {
+  direction: ltr;
+}
+
+html[dir="rtl"] .neofetch-container {
+  direction: ltr;
+}
+
+html[dir="rtl"] .message-bubble {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 4px;
+}
+
+html[dir="rtl"] .panel-left {
+  order: 3;
+}
+
+html[dir="rtl"] .panel-right {
+  order: 1;
+}
+
+html[dir="rtl"] .browser-url-bar {
+  direction: ltr;
+}
