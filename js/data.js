@@ -92,6 +92,27 @@ const portfolioData = {
     ],
     projects: [
       {
+        name: "ai2md",
+        desc: "Cross-browser extension that exports AI chats (ChatGPT) to Markdown, PDF, HTML & more — network-first, with full-context image/attachment embedding. Approved on Firefox Add-ons. github.com/walidnabilx/ai2md",
+        tags: ["JavaScript", "Browser Extension", "MV3", "Node.js"],
+        status: "Firefox Add-ons",
+        icon: "🧩"
+      },
+      {
+        name: "SmartVision",
+        desc: "Classical computer-vision PoC detecting trash drops, wrong-way vehicles and pedestrian density from video, with annotated evidence clips. OpenCV, no GPU. github.com/walidnabilx/smartvision",
+        tags: ["Python", "OpenCV", "Computer Vision"],
+        status: "Open Source",
+        icon: "👁️"
+      },
+      {
+        name: "claude-statusline",
+        desc: "Adaptive status line for Claude Code — model, context-window usage and rate-limit bars in one dependency-light Bash script. github.com/walidnabilx/claude-statusline",
+        tags: ["Bash", "CLI", "Claude Code"],
+        status: "Open Source",
+        icon: "🖥️"
+      },
+      {
         name: "E-Commerce Platform",
         desc: "Full-stack online store with product management, cart system, payment integration, and admin dashboard.",
         tags: ["Node.js", "React", "MongoDB", "Stripe"],
@@ -259,6 +280,27 @@ const portfolioData = {
       }
     ],
     projects: [
+      {
+        name: "ai2md",
+        desc: "إضافة متصفّح تصدّر محادثات الذكاء الاصطناعي (ChatGPT) إلى Markdown وPDF وHTML وغيرها — تعتمد على اعتراض الشبكة مع تضمين الصور والمرفقات كاملةً. معتمدة على إضافات فايرفوكس. github.com/walidnabilx/ai2md",
+        tags: ["JavaScript", "إضافة متصفّح", "MV3", "Node.js"],
+        status: "إضافات فايرفوكس",
+        icon: "🧩"
+      },
+      {
+        name: "SmartVision",
+        desc: "نموذج رؤية حاسوبية تقليدية يكتشف إلقاء المخلّفات والمركبات المخالفة وكثافة المشاة من الفيديو، مع حفظ مقاطع دليلية. يعتمد على OpenCV بدون GPU. github.com/walidnabilx/smartvision",
+        tags: ["Python", "OpenCV", "رؤية حاسوبية"],
+        status: "مفتوح المصدر",
+        icon: "👁️"
+      },
+      {
+        name: "claude-statusline",
+        desc: "شريط حالة تكيّفي لـ Claude Code — يعرض النموذج واستهلاك نافذة السياق وحدود الاستخدام في سكربت Bash خفيف. github.com/walidnabilx/claude-statusline",
+        tags: ["Bash", "CLI", "Claude Code"],
+        status: "مفتوح المصدر",
+        icon: "🖥️"
+      },
       {
         name: "منصة تجارة إلكترونية",
         desc: "متجر إلكتروني متكامل مع إدارة المنتجات وسلة المشتريات وتكامل الدفع ولوحة تحكم.",
