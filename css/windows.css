@@ -26,48 +26,77 @@
 }
 
 .app-window.opening {
-  animation: windowOpen 0.25s ease forwards;
+  animation: windowOpen 0.26s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .app-window.closing {
-  animation: windowClose 0.2s ease forwards;
+  animation: windowClose 0.16s cubic-bezier(0.4, 0, 1, 1) forwards;
 }
 
 .app-window.minimizing {
-  animation: windowMinimize 0.25s ease forwards;
+  animation: windowMinimize 0.28s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* While dragging/resizing: drop transitions and hint the compositor for smoothness */
+.app-window.dragging,
+.app-window.resizing {
+  will-change: left, top, width, height;
+  transition: none;
+  user-select: none;
 }
 
 @keyframes windowOpen {
-  from { transform: scale(0.85); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from { transform: scale(0.96) translateY(8px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
 }
 
 @keyframes windowClose {
-  from { transform: scale(1); opacity: 1; }
-  to { transform: scale(0.85); opacity: 0; }
+  from { transform: scale(1) translateY(0); opacity: 1; }
+  to { transform: scale(0.97) translateY(4px); opacity: 0; }
 }
 
 @keyframes windowMinimize {
   from { transform: scale(1) translateY(0); opacity: 1; }
-  to { transform: scale(0.5) translateY(100px); opacity: 0; }
+  to { transform: scale(0.7) translateY(120px); opacity: 0; }
 }
 
-/* ── Title Bar ── */
+/* ── GNOME / Yaru Headerbar ── */
 .window-titlebar {
-  height: 38px;
-  background: #3c3c3c;
+  height: 44px;
+  background: linear-gradient(#3a3a3a, #323232);
   display: flex;
   align-items: center;
-  padding: 0 12px;
+  padding: 0 8px 0 16px;
   cursor: default;
   flex-shrink: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+.app-window:not(.focused) .window-titlebar {
+  background: #2f2f2f;
 }
 
 .app-window.maximized .window-titlebar {
   border-radius: 0;
 }
 
+.window-title {
+  flex: 1;
+  text-align: center;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  pointer-events: none;
+  letter-spacing: 0.2px;
+  /* keep the title visually centered despite right-side controls */
+  padding-left: 84px;
+}
+
+.app-window:not(.focused) .window-title {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* GNOME puts window controls on the RIGHT as round symbolic buttons */
 .window-controls {
   display: flex;
   gap: 8px;
@@ -75,49 +104,34 @@
 }
 
 .window-controls .ctrl-btn {
-  width: 14px;
-  height: 14px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: filter 0.15s;
+  background: rgba(255, 255, 255, 0.09);
+  color: rgba(255, 255, 255, 0.85);
+  transition: background 0.15s ease, color 0.15s ease, transform 0.08s ease;
 }
 
 .window-controls .ctrl-btn:hover {
-  filter: brightness(1.2);
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.window-controls .ctrl-btn:active {
+  transform: scale(0.92);
+}
+
+.window-controls .ctrl-close:hover {
+  background: #e95420;
+  color: #fff;
 }
 
 .window-controls .ctrl-btn svg {
-  width: 8px;
-  height: 8px;
-  opacity: 0;
-  transition: opacity 0.15s;
-}
-
-.window-titlebar:hover .ctrl-btn svg {
-  opacity: 1;
-}
-
-.ctrl-close {
-  background: #e95420;
-}
-
-.ctrl-minimize {
-  background: #f5a623;
-}
-
-.ctrl-maximize {
-  background: #73c48f;
-}
-
-.window-title {
-  flex: 1;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
-  pointer-events: none;
+  width: 16px;
+  height: 16px;
 }
 
 /* ── Window Body ── */

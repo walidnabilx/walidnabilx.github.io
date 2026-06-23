@@ -1,93 +1,82 @@
 const portfolioData = {
   en: {
     name: "Walid Nabil",
-    title: "Software Developer",
+    title: "Software Engineer",
     loginGreeting: "Click to log in",
-    bio: "Passionate software developer with a focus on building clean, efficient, and user-friendly applications. Based in Egypt, I specialize in crafting modern web experiences and solving real-world problems through code.",
+    bio: "Just a human who loves software engineering ♥️ — 11+ years building browser extensions, web apps, automation, and computer-vision tools. Based in Egypt, shipping small, sharp, honest software.",
     location: "Egypt",
-    email: "walid@example.com",
-    github: "github.com/walid-nabil",
+    email: "wnmaghraby@gmail.com",
+    github: "github.com/walidnabilx",
     stats: [
-      { label: "Projects Delivered", value: 12 },
-      { label: "Years Experience", value: 3 },
+      { label: "Years Experience", value: 11 },
+      { label: "Open-Source Projects", value: 3 },
       { label: "Technologies", value: 15 },
-      { label: "Happy Clients", value: 8 }
+      { label: "Languages", value: 6 }
     ],
     services: [
       {
         icon: "🌐",
         title: "Web Development",
-        desc: "Full-stack web applications with modern frameworks, responsive design, and robust backend architecture."
+        desc: "Full-stack web applications with PHP/Laravel and Node.js — responsive front-ends and robust back-end architecture."
       },
       {
-        icon: "📱",
-        title: "Mobile Development",
-        desc: "Cross-platform mobile apps with smooth performance and native-quality user experience."
+        icon: "🧩",
+        title: "Browser Extensions",
+        desc: "Cross-browser MV3 extensions (Chrome, Firefox) — network-first data capture, packaging, and store publishing."
       },
       {
         icon: "⚙️",
         title: "API Development",
-        desc: "RESTful APIs, third-party integrations, payment gateways, and microservices architecture."
+        desc: "RESTful APIs, third-party integrations, payment gateways, and clean service architecture."
       },
       {
         icon: "🤖",
         title: "Automation & Bots",
-        desc: "Intelligent bots and automation scripts to streamline workflows and boost productivity."
+        desc: "Telegram bots, scripts, and automation that streamline real workflows and remove busywork."
+      },
+      {
+        icon: "👁️",
+        title: "Computer Vision",
+        desc: "Classical CV pipelines with OpenCV — detection, tracking, and evidence capture from video. No GPU required."
       },
       {
         icon: "🗄️",
-        title: "Database Design",
-        desc: "Efficient database schemas, query optimization, and data modeling for scalable applications."
-      },
-      {
-        icon: "☁️",
-        title: "DevOps & Deployment",
-        desc: "CI/CD pipelines, containerization, cloud infrastructure, and server management."
+        title: "Databases & DevOps",
+        desc: "Schema design and query tuning (MySQL, PostgreSQL) plus deployment, servers, and CI."
       }
     ],
     skills: {
       os: "Ubuntu 24.04 LTS",
-      host: "Walid Nabil",
-      kernel: "Full-Stack Developer",
-      uptime: "3 years",
-      packages: "15 technologies",
+      host: "walidnabilx",
+      kernel: "Software Engineer",
+      uptime: "11 years",
+      packages: "20 technologies",
       shell: "bash 5.2",
-      languages: ["JavaScript", "TypeScript", "Python", "PHP", "HTML/CSS"],
-      frameworks: ["React", "Node.js", "Express", "Next.js", "Laravel"],
-      databases: ["MongoDB", "PostgreSQL", "MySQL", "Redis"],
-      tools: ["Git", "Docker", "VS Code", "Linux", "Nginx", "Postman"],
-      cloud: ["DigitalOcean", "AWS", "Firebase", "Vercel"]
+      languages: ["JavaScript", "TypeScript", "Python", "PHP", "Bash", "HTML/CSS"],
+      frameworks: ["Node.js", "Express", "Laravel", "React", "Next.js"],
+      databases: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
+      tools: ["Git", "Docker", "Linux", "Nginx", "OpenCV", "VS Code"],
+      cloud: ["Vercel", "Firebase", "DigitalOcean", "AWS"]
     },
     experience: [
       {
-        role: "Full-Stack Developer",
-        company: "Freelance",
-        period: "2023 — Present",
+        role: "Software Engineer",
+        company: "Independent · Maghraby Systems",
+        period: "2014 — Present",
         details: [
-          "Built and delivered multiple production-ready web applications for clients across the MENA region",
-          "Developed RESTful APIs, admin dashboards, and real-time features using Node.js and React",
-          "Managed full project lifecycle from requirements gathering to deployment and post-launch support"
+          "11+ years building production software — web apps, browser extensions, automation, and computer-vision tools",
+          "Shipped ai2md to Firefox Add-ons and maintain open-source developer tooling on GitHub",
+          "Deliver full-lifecycle client systems: back-end APIs, admin dashboards, and control panels (PHP/Laravel, Node.js)"
         ],
-        tags: ["Node.js", "React", "MongoDB", "Express"]
-      },
-      {
-        role: "Junior Developer",
-        company: "Tech Startup",
-        period: "2022 — 2023",
-        details: [
-          "Contributed to frontend and backend features for the company's SaaS platform",
-          "Implemented responsive UI components and integrated third-party APIs",
-          "Participated in code reviews and agile development processes"
-        ],
-        tags: ["JavaScript", "PHP", "MySQL", "Git"]
+        tags: ["JavaScript", "Node.js", "PHP/Laravel", "Python"]
       }
     ],
     education: [
       {
-        degree: "Bachelor's in Computer Science",
-        school: "Faculty of Computers & Information",
-        period: "2020 — 2024",
-        details: "Studied algorithms, data structures, software engineering, databases, and networking."
+        degree: "Computer Science & Self-Driven Learning",
+        school: "Continuous, hands-on",
+        period: "2014 — Present",
+        details: "Eleven years of learning by shipping — across the full stack, from back-end systems and APIs to browser extensions and classical computer vision."
       }
     ],
     projects: [
@@ -113,170 +102,131 @@ const portfolioData = {
         icon: "🖥️"
       },
       {
-        name: "E-Commerce Platform",
-        desc: "Full-stack online store with product management, cart system, payment integration, and admin dashboard.",
-        tags: ["Node.js", "React", "MongoDB", "Stripe"],
-        status: "Delivered",
-        icon: "🛒"
-      },
-      {
-        name: "Task Management App",
-        desc: "Real-time collaborative task board with drag-and-drop, assignments, and notifications.",
-        tags: ["Next.js", "Socket.io", "PostgreSQL"],
-        status: "Delivered",
-        icon: "📋"
-      },
-      {
         name: "Portfolio OS",
-        desc: "This very portfolio — an Ubuntu-themed interactive desktop experience built with vanilla JS.",
+        desc: "This very portfolio — an Ubuntu-themed interactive desktop, built with vanilla HTML/CSS/JS, bilingual EN/AR with full RTL. No build step.",
         tags: ["HTML", "CSS", "JavaScript"],
         status: "Live",
         icon: "💻"
       },
       {
-        name: "Chat Application",
-        desc: "Real-time messaging app with rooms, file sharing, and read receipts.",
-        tags: ["Node.js", "Socket.io", "React", "Redis"],
-        status: "Delivered",
-        icon: "💬"
-      },
-      {
-        name: "Blog CMS",
-        desc: "Content management system with markdown editor, categories, SEO optimization, and analytics.",
-        tags: ["Laravel", "MySQL", "Tailwind CSS"],
-        status: "Delivered",
-        icon: "📝"
-      },
-      {
-        name: "Weather Dashboard",
-        desc: "Beautiful weather app with location detection, forecasts, and animated weather icons.",
-        tags: ["React", "OpenWeather API", "CSS"],
-        status: "Open Source",
-        icon: "🌤️"
+        name: "Client Systems & Panels",
+        desc: "Production web panels, dashboards, and back-office systems delivered for clients (private). Built with PHP/Laravel and Node.js.",
+        tags: ["PHP/Laravel", "Node.js", "MySQL"],
+        status: "Private",
+        icon: "🗄️"
       }
     ],
-    reviews: [
+    notes: [
       {
-        text: "Walid delivered an exceptional e-commerce platform that exceeded our expectations. Clean code, great communication, and on-time delivery. Highly recommended!",
-        name: "Ahmed Hassan",
-        project: "E-Commerce Platform",
-        initials: "AH"
+        title: "Honest tools",
+        tag: "principle",
+        text: "I build software that respects people's time and data — no dark patterns, no bloat. ai2md, for example, processes everything locally and collects nothing.",
+        badge: "♥"
       },
       {
-        text: "Working with Walid was a pleasure. He understood our requirements perfectly and built a robust task management system. His attention to detail is outstanding.",
-        name: "Sarah Ibrahim",
-        project: "Task Management App",
-        initials: "SI"
+        title: "Small & sharp",
+        tag: "principle",
+        text: "I prefer small, well-tested tools that do one thing well over large, fragile ones. Tests and clear boundaries over cleverness.",
+        badge: "✦"
       },
       {
-        text: "Professional, responsive, and talented. Walid built our blog CMS from scratch and it runs flawlessly. We continue to work with him on new features.",
-        name: "Omar Khalil",
-        project: "Blog CMS",
-        initials: "OK"
+        title: "Open by default",
+        tag: "principle",
+        text: "After 11+ years, I'm bringing my work into the open one project at a time — and helping the community where I can.",
+        badge: "↗"
       }
     ],
     links: [
-      { label: "GitHub", url: "https://github.com/walid-nabil", icon: "github" },
-      { label: "LinkedIn", url: "https://linkedin.com/in/walid-nabil", icon: "linkedin" },
-      { label: "Twitter / X", url: "https://x.com/walid_nabil", icon: "twitter" },
-      { label: "Email", url: "mailto:walid@example.com", icon: "email" }
+      { label: "GitHub", url: "https://github.com/walidnabilx", icon: "github" },
+      { label: "Twitter / X", url: "https://x.com/walidnabilx", icon: "twitter" },
+      { label: "ai2md", url: "https://github.com/walidnabilx/ai2md", icon: "extension" },
+      { label: "Email", url: "mailto:wnmaghraby@gmail.com", icon: "email" }
     ],
     terminalCommands: {
       help: "Available commands: whoami, skills, tools, projects, contact, neofetch, clear",
-      whoami: "Walid Nabil — Full-Stack Developer based in Egypt",
-      contact: "Email: walid@example.com | GitHub: github.com/walid-nabil",
+      whoami: "Walid Nabil — Software Engineer based in Egypt, 11+ years building software ♥️",
+      contact: "Email: wnmaghraby@gmail.com | GitHub: github.com/walidnabilx | X: @walidnabilx",
       unknown: "Command not found. Type 'help' for available commands."
     }
   },
   ar: {
     name: "وليد نبيل",
-    title: "مطور برمجيات",
+    title: "مهندس برمجيات",
     loginGreeting: "اضغط لتسجيل الدخول",
-    bio: "مطور برمجيات شغوف بالتركيز على بناء تطبيقات نظيفة وفعّالة وسهلة الاستخدام. مقيم في مصر، متخصص في تطوير تجارب ويب حديثة وحل المشاكل الحقيقية من خلال البرمجة.",
+    bio: "إنسان يحب هندسة البرمجيات ♥️ — أكثر من ١١ عامًا في بناء إضافات المتصفّح وتطبيقات الويب والأتمتة وأدوات الرؤية الحاسوبية. مقيم في مصر، أبني أدوات صغيرة ودقيقة وصادقة.",
     location: "مصر",
-    email: "walid@example.com",
-    github: "github.com/walid-nabil",
+    email: "wnmaghraby@gmail.com",
+    github: "github.com/walidnabilx",
     stats: [
-      { label: "مشروع تم تسليمه", value: 12 },
-      { label: "سنوات خبرة", value: 3 },
+      { label: "سنوات الخبرة", value: 11 },
+      { label: "مشاريع مفتوحة المصدر", value: 3 },
       { label: "تقنية", value: 15 },
-      { label: "عملاء سعداء", value: 8 }
+      { label: "لغات برمجة", value: 6 }
     ],
     services: [
       {
         icon: "🌐",
         title: "تطوير الويب",
-        desc: "تطبيقات ويب متكاملة بأطر عمل حديثة وتصميم متجاوب وبنية خلفية قوية."
+        desc: "تطبيقات ويب متكاملة بـ PHP/Laravel و Node.js — واجهات متجاوبة وبنية خلفية قوية."
       },
       {
-        icon: "📱",
-        title: "تطوير الموبايل",
-        desc: "تطبيقات موبايل متعددة المنصات بأداء سلس وتجربة مستخدم عالية الجودة."
+        icon: "🧩",
+        title: "إضافات المتصفّح",
+        desc: "إضافات MV3 متعددة المتصفّحات (Chrome وFirefox) — التقاط بيانات يعتمد على الشبكة، تغليف، ونشر في المتاجر."
       },
       {
         icon: "⚙️",
         title: "تطوير الـ APIs",
-        desc: "واجهات RESTful، تكاملات طرف ثالث، بوابات دفع، وبنية خدمات مصغرة."
+        desc: "واجهات RESTful، تكاملات طرف ثالث، بوابات دفع، وبنية خدمات نظيفة."
       },
       {
         icon: "🤖",
         title: "الأتمتة والبوتات",
-        desc: "بوتات ذكية وسكريبتات أتمتة لتبسيط سير العمل وزيادة الإنتاجية."
+        desc: "بوتات تيليجرام وسكريبتات وأتمتة تبسّط سير العمل الحقيقي وتزيل المهام المتكررة."
+      },
+      {
+        icon: "👁️",
+        title: "الرؤية الحاسوبية",
+        desc: "مسارات رؤية حاسوبية تقليدية بـ OpenCV — كشف وتتبّع والتقاط أدلة من الفيديو. بدون GPU."
       },
       {
         icon: "🗄️",
-        title: "تصميم قواعد البيانات",
-        desc: "مخططات قواعد بيانات فعّالة، تحسين الاستعلامات، ونمذجة البيانات لتطبيقات قابلة للتوسع."
-      },
-      {
-        icon: "☁️",
-        title: "DevOps والنشر",
-        desc: "خطوط CI/CD، حاويات، بنية سحابية، وإدارة الخوادم."
+        title: "قواعد البيانات و DevOps",
+        desc: "تصميم المخططات وتحسين الاستعلامات (MySQL و PostgreSQL) إضافةً إلى النشر والخوادم والـ CI."
       }
     ],
     skills: {
       os: "Ubuntu 24.04 LTS",
-      host: "وليد نبيل",
-      kernel: "مطور متكامل",
-      uptime: "٣ سنوات",
-      packages: "١٥ تقنية",
+      host: "walidnabilx",
+      kernel: "مهندس برمجيات",
+      uptime: "١١ سنة",
+      packages: "٢٠ تقنية",
       shell: "bash 5.2",
-      languages: ["JavaScript", "TypeScript", "Python", "PHP", "HTML/CSS"],
-      frameworks: ["React", "Node.js", "Express", "Next.js", "Laravel"],
-      databases: ["MongoDB", "PostgreSQL", "MySQL", "Redis"],
-      tools: ["Git", "Docker", "VS Code", "Linux", "Nginx", "Postman"],
-      cloud: ["DigitalOcean", "AWS", "Firebase", "Vercel"]
+      languages: ["JavaScript", "TypeScript", "Python", "PHP", "Bash", "HTML/CSS"],
+      frameworks: ["Node.js", "Express", "Laravel", "React", "Next.js"],
+      databases: ["MySQL", "PostgreSQL", "MongoDB", "Redis"],
+      tools: ["Git", "Docker", "Linux", "Nginx", "OpenCV", "VS Code"],
+      cloud: ["Vercel", "Firebase", "DigitalOcean", "AWS"]
     },
     experience: [
       {
-        role: "مطور متكامل",
-        company: "عمل حر",
-        period: "٢٠٢٣ — الحالي",
+        role: "مهندس برمجيات",
+        company: "مستقل · Maghraby Systems",
+        period: "٢٠١٤ — الحالي",
         details: [
-          "بناء وتسليم عدة تطبيقات ويب جاهزة للإنتاج لعملاء في منطقة الشرق الأوسط",
-          "تطوير واجهات RESTful ولوحات تحكم وميزات لحظية باستخدام Node.js و React",
-          "إدارة دورة حياة المشروع الكاملة من جمع المتطلبات إلى النشر والدعم"
+          "أكثر من ١١ عامًا في بناء برمجيات إنتاجية — تطبيقات ويب وإضافات متصفّح وأتمتة وأدوات رؤية حاسوبية",
+          "نشرت ai2md على إضافات فايرفوكس وأطوّر أدوات مفتوحة المصدر على GitHub",
+          "تسليم أنظمة عملاء كاملة: واجهات خلفية ولوحات تحكم ولوحات إدارة (PHP/Laravel و Node.js)"
         ],
-        tags: ["Node.js", "React", "MongoDB", "Express"]
-      },
-      {
-        role: "مطور مبتدئ",
-        company: "شركة ناشئة",
-        period: "٢٠٢٢ — ٢٠٢٣",
-        details: [
-          "المساهمة في ميزات الفرونت والباك لمنصة SaaS الخاصة بالشركة",
-          "تنفيذ مكونات واجهة متجاوبة وتكامل APIs خارجية",
-          "المشاركة في مراجعات الكود وعمليات التطوير المرنة"
-        ],
-        tags: ["JavaScript", "PHP", "MySQL", "Git"]
+        tags: ["JavaScript", "Node.js", "PHP/Laravel", "Python"]
       }
     ],
     education: [
       {
-        degree: "بكالوريوس علوم الحاسب",
-        school: "كلية الحاسبات والمعلومات",
-        period: "٢٠٢٠ — ٢٠٢٤",
-        details: "دراسة الخوارزميات وهياكل البيانات وهندسة البرمجيات وقواعد البيانات والشبكات."
+        degree: "علوم الحاسب وتعلّم ذاتي مستمر",
+        school: "عملي ومستمر",
+        period: "٢٠١٤ — الحالي",
+        details: "أحد عشر عامًا من التعلّم عبر البناء — عبر الـ full stack، من الأنظمة الخلفية والـ APIs إلى إضافات المتصفّح والرؤية الحاسوبية التقليدية."
       }
     ],
     projects: [
@@ -302,78 +252,50 @@ const portfolioData = {
         icon: "🖥️"
       },
       {
-        name: "منصة تجارة إلكترونية",
-        desc: "متجر إلكتروني متكامل مع إدارة المنتجات وسلة المشتريات وتكامل الدفع ولوحة تحكم.",
-        tags: ["Node.js", "React", "MongoDB", "Stripe"],
-        status: "تم التسليم",
-        icon: "🛒"
-      },
-      {
-        name: "تطبيق إدارة المهام",
-        desc: "لوحة مهام تعاونية لحظية مع السحب والإفلات والتعيينات والإشعارات.",
-        tags: ["Next.js", "Socket.io", "PostgreSQL"],
-        status: "تم التسليم",
-        icon: "📋"
-      },
-      {
         name: "Portfolio OS",
-        desc: "هذا البورتفوليو — تجربة سطح مكتب أوبونتو تفاعلية مبنية بـ JavaScript.",
+        desc: "هذا البورتفوليو — سطح مكتب أوبونتو تفاعلي مبني بـ HTML/CSS/JS خام، ثنائي اللغة EN/AR مع دعم RTL كامل. بدون خطوة بناء.",
         tags: ["HTML", "CSS", "JavaScript"],
         status: "مباشر",
         icon: "💻"
       },
       {
-        name: "تطبيق محادثة",
-        desc: "تطبيق مراسلة لحظي مع غرف ومشاركة ملفات وتأكيد القراءة.",
-        tags: ["Node.js", "Socket.io", "React", "Redis"],
-        status: "تم التسليم",
-        icon: "💬"
-      },
-      {
-        name: "نظام إدارة محتوى",
-        desc: "نظام إدارة محتوى مع محرر ماركداون وتصنيفات وتحسين SEO وتحليلات.",
-        tags: ["Laravel", "MySQL", "Tailwind CSS"],
-        status: "تم التسليم",
-        icon: "📝"
-      },
-      {
-        name: "لوحة الطقس",
-        desc: "تطبيق طقس جميل مع كشف الموقع والتوقعات وأيقونات طقس متحركة.",
-        tags: ["React", "OpenWeather API", "CSS"],
-        status: "مفتوح المصدر",
-        icon: "🌤️"
+        name: "أنظمة ولوحات للعملاء",
+        desc: "لوحات وأنظمة إدارة إنتاجية تم تسليمها لعملاء (خاصة). مبنية بـ PHP/Laravel و Node.js.",
+        tags: ["PHP/Laravel", "Node.js", "MySQL"],
+        status: "خاص",
+        icon: "🗄️"
       }
     ],
-    reviews: [
+    notes: [
       {
-        text: "وليد سلّم منصة تجارة إلكترونية استثنائية فاقت توقعاتنا. كود نظيف وتواصل ممتاز وتسليم في الوقت المحدد. أنصح به بشدة!",
-        name: "أحمد حسن",
-        project: "منصة تجارة إلكترونية",
-        initials: "أح"
+        title: "أدوات صادقة",
+        tag: "مبدأ",
+        text: "أبني برمجيات تحترم وقت الناس وبياناتهم — بلا أنماط خادعة ولا حشو. ai2md مثلًا يعالج كل شيء محليًا ولا يجمع أي بيانات.",
+        badge: "♥"
       },
       {
-        text: "العمل مع وليد كان ممتع. فهم متطلباتنا بشكل مثالي وبنى نظام إدارة مهام متين. اهتمامه بالتفاصيل مميز.",
-        name: "سارة إبراهيم",
-        project: "تطبيق إدارة المهام",
-        initials: "سإ"
+        title: "صغيرة ودقيقة",
+        tag: "مبدأ",
+        text: "أفضّل الأدوات الصغيرة جيدة الاختبار التي تتقن مهمة واحدة على الأدوات الضخمة الهشّة. اختبارات وحدود واضحة قبل الاستعراض.",
+        badge: "✦"
       },
       {
-        text: "محترف وسريع الاستجابة وموهوب. وليد بنى نظام إدارة المحتوى من الصفر وهو يعمل بشكل ممتاز. نستمر في العمل معه على ميزات جديدة.",
-        name: "عمر خليل",
-        project: "نظام إدارة محتوى",
-        initials: "عخ"
+        title: "مفتوح بشكل افتراضي",
+        tag: "مبدأ",
+        text: "بعد أكثر من ١١ عامًا، أنقل عملي إلى العلن مشروعًا تلو الآخر — وأساعد المجتمع حيثما أستطيع.",
+        badge: "↗"
       }
     ],
     links: [
-      { label: "GitHub", url: "https://github.com/walid-nabil", icon: "github" },
-      { label: "LinkedIn", url: "https://linkedin.com/in/walid-nabil", icon: "linkedin" },
-      { label: "Twitter / X", url: "https://x.com/walid_nabil", icon: "twitter" },
-      { label: "البريد الإلكتروني", url: "mailto:walid@example.com", icon: "email" }
+      { label: "GitHub", url: "https://github.com/walidnabilx", icon: "github" },
+      { label: "Twitter / X", url: "https://x.com/walidnabilx", icon: "twitter" },
+      { label: "ai2md", url: "https://github.com/walidnabilx/ai2md", icon: "extension" },
+      { label: "البريد الإلكتروني", url: "mailto:wnmaghraby@gmail.com", icon: "email" }
     ],
     terminalCommands: {
       help: "الأوامر المتاحة: whoami, skills, tools, projects, contact, neofetch, clear",
-      whoami: "وليد نبيل — مطور متكامل مقيم في مصر",
-      contact: "البريد: walid@example.com | GitHub: github.com/walid-nabil",
+      whoami: "وليد نبيل — مهندس برمجيات مقيم في مصر، أكثر من ١١ عامًا في بناء البرمجيات ♥️",
+      contact: "البريد: wnmaghraby@gmail.com | GitHub: github.com/walidnabilx | X: @walidnabilx",
       unknown: "الأمر غير موجود. اكتب 'help' للأوامر المتاحة."
     }
   }

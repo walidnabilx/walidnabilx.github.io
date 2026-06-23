@@ -420,7 +420,7 @@ ossss<span style="color:#e95420">dMMMMMMMh</span>ssssssssssssss<span style="colo
 
   /* ── Browser (Links) ── */
   function openBrowser(data, t) {
-    const linkIcons = { github: '⌨️', linkedin: '💼', twitter: '🐦', email: '📧' };
+    const linkIcons = { github: '⌨️', linkedin: '💼', twitter: '🐦', email: '📧', extension: '🧩' };
 
     const html = `<div class="browser-app">
       <div class="browser-toolbar">
@@ -428,7 +428,7 @@ ossss<span style="color:#e95420">dMMMMMMMh</span>ssssssssssssss<span style="colo
           <button>←</button><button>→</button><button>↻</button>
         </div>
         <div class="browser-url-bar">
-          <span class="lock-icon">🔒</span> ${data.name.toLowerCase().replace(' ', '')}.dev/links
+          <span class="lock-icon">🔒</span> walidnabilx.github.io/links
         </div>
       </div>
       <div class="browser-content">
@@ -449,24 +449,25 @@ ossss<span style="color:#e95420">dMMMMMMMh</span>ssssssssssssss<span style="colo
     WindowManager.create('browser', t('Firefox', 'فايرفوكس'), html, { width: 680, height: 440 });
   }
 
-  /* ── Messages (Reviews) ── */
+  /* ── Messages (How I Work — principles) ── */
   function openMessages(data, t) {
+    const items = data.notes || [];
     const html = `<div class="messages-app">
-      <div class="messages-header">${t('Client Reviews', 'آراء العملاء')}</div>
+      <div class="messages-header">${t('How I Work', 'كيف أعمل')}</div>
       <div class="messages-list">
-        ${data.reviews.map(r => `
+        ${items.map(r => `
           <div class="message-item">
-            <div class="message-avatar">${r.initials}</div>
+            <div class="message-avatar">${r.badge}</div>
             <div class="message-bubble">
-              <div class="message-name">${r.name}</div>
-              <div class="message-project">${r.project}</div>
+              <div class="message-name">${r.title}</div>
+              <div class="message-project">${r.tag}</div>
               <div class="message-text">${r.text}</div>
             </div>
           </div>`).join('')}
       </div>
     </div>`;
 
-    WindowManager.create('messages', t('Messages', 'الرسائل'), html, { width: 620, height: 460 });
+    WindowManager.create('messages', t('How I Work', 'كيف أعمل'), html, { width: 620, height: 460 });
   }
 
   return { open };

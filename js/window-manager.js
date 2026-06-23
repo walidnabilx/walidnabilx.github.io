@@ -27,18 +27,18 @@ const WindowManager = (() => {
 
     win.innerHTML = `
       <div class="window-titlebar">
+        <span class="window-title">${title}</span>
         <div class="window-controls">
-          <button class="ctrl-btn ctrl-close" data-action="close">
-            <svg viewBox="0 0 8 8"><path d="M1 1l6 6M7 1l-6 6" stroke="#fff" stroke-width="1.5" fill="none"/></svg>
+          <button class="ctrl-btn ctrl-minimize" data-action="minimize" aria-label="Minimize">
+            <svg viewBox="0 0 16 16"><path d="M4 8.25h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="none"/></svg>
           </button>
-          <button class="ctrl-btn ctrl-minimize" data-action="minimize">
-            <svg viewBox="0 0 8 8"><path d="M1 4h6" stroke="#fff" stroke-width="1.5" fill="none"/></svg>
+          <button class="ctrl-btn ctrl-maximize" data-action="maximize" aria-label="Maximize">
+            <svg viewBox="0 0 16 16"><rect x="4.2" y="4.2" width="7.6" height="7.6" rx="1.4" stroke="currentColor" stroke-width="1.4" fill="none"/></svg>
           </button>
-          <button class="ctrl-btn ctrl-maximize" data-action="maximize">
-            <svg viewBox="0 0 8 8"><rect x="1" y="1" width="6" height="6" rx="0.5" stroke="#fff" stroke-width="1" fill="none"/></svg>
+          <button class="ctrl-btn ctrl-close" data-action="close" aria-label="Close">
+            <svg viewBox="0 0 16 16"><path d="M5 5l6 6M11 5l-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="none"/></svg>
           </button>
         </div>
-        <span class="window-title">${title}</span>
       </div>
       <div class="window-body">${contentHtml}</div>
       <div class="resize-handle resize-n"></div>
@@ -101,6 +101,8 @@ const WindowManager = (() => {
         origX: win.offsetLeft,
         origY: win.offsetTop
       };
+      win.classList.add('dragging');
+      document.body.classList.add('window-dragging');
       e.preventDefault();
     });
   }
@@ -121,6 +123,7 @@ const WindowManager = (() => {
           origW: win.offsetWidth,
           origH: win.offsetHeight
         };
+        win.classList.add('resizing');
         e.preventDefault();
         e.stopPropagation();
       });
@@ -224,6 +227,15 @@ const WindowManager = (() => {
     });
 
     document.addEventListener('mouseup', () => {
+      if (dragState) {
+        const s = windows.get(dragState.appId);
+        if (s) s.el.classList.remove('dragging');
+      }
+      if (resizeState) {
+        const s = windows.get(resizeState.appId);
+        if (s) s.el.classList.remove('resizing');
+      }
+      document.body.classList.remove('window-dragging');
       dragState = null;
       resizeState = null;
     });

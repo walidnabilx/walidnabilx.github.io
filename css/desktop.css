@@ -19,8 +19,19 @@
 .desktop-wallpaper {
   position: absolute;
   inset: 0;
-  background: linear-gradient(160deg, #2c001e 0%, #300a24 30%, #4a1942 60%, #e95420 100%);
+  background:
+    radial-gradient(120% 80% at 78% 16%, rgba(233, 84, 32, 0.55) 0%, rgba(233, 84, 32, 0) 46%),
+    radial-gradient(90% 70% at 10% 90%, rgba(119, 40, 99, 0.6) 0%, rgba(119, 40, 99, 0) 52%),
+    linear-gradient(160deg, #2c001e 0%, #300a24 32%, #45123c 62%, #772863 100%);
   z-index: 0;
+}
+
+.desktop-wallpaper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(58% 52% at 72% 28%, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0) 60%);
+  pointer-events: none;
 }
 
 /* ── Top Panel ── */
@@ -259,4 +270,130 @@
   height: 1px;
   background: rgba(255, 255, 255, 0.1);
   margin: 4px 0;
+}
+
+/* ── GNOME panel pills & system menu (authenticity pass) ── */
+.top-panel {
+  height: 30px;
+}
+
+.panel-center {
+  padding: 3px 12px;
+  border-radius: 999px;
+  transition: background 0.15s ease;
+  cursor: default;
+}
+
+.panel-center:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.panel-right {
+  gap: 6px;
+}
+
+/* group the status icons into one clickable GNOME "system menu" pill */
+.system-menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.system-menu-btn:hover,
+.system-menu-btn.open {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.system-menu {
+  position: absolute;
+  top: 36px;
+  right: 8px;
+  width: 280px;
+  background: rgba(36, 36, 36, 0.96);
+  backdrop-filter: blur(18px) saturate(1.3);
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+  padding: 10px;
+  z-index: 600;
+  opacity: 0;
+  transform: translateY(-8px) scale(0.98);
+  transform-origin: top right;
+  pointer-events: none;
+  transition: opacity 0.16s ease, transform 0.16s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.system-menu.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.system-menu-greeting {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 8px;
+}
+
+.system-menu-greeting .sm-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e95420, #c34113);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.system-menu-greeting .sm-name { font-size: 14px; font-weight: 600; }
+.system-menu-greeting .sm-sub { font-size: 11.5px; color: rgba(255, 255, 255, 0.55); }
+
+.system-menu-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 10px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 13.5px;
+  transition: background 0.12s ease;
+}
+
+.system-menu-row:hover { background: rgba(255, 255, 255, 0.09); }
+.system-menu-row .sm-ico { width: 18px; text-align: center; opacity: 0.9; }
+.system-menu-row.danger:hover { background: rgba(233, 84, 32, 0.32); }
+
+/* ── Smoothness touches ── */
+.dock-item {
+  transition: background 0.18s ease, transform 0.18s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.window-dragging,
+body.window-dragging * {
+  cursor: grabbing !important;
+  user-select: none !important;
+}
+
+/* ── Respect reduced-motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
